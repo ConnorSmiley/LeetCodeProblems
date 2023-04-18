@@ -1,5 +1,5 @@
-// let b = "anagram"
 // let c = "anagram"
+// let d = "anagram"
 //
 // function sort(a, v) {
 //     return (a.split('').sort().join("") === v.split('').sort().join(''))
@@ -33,23 +33,74 @@
 // console.log(something(word1, word2))
 
 
-const a = 'car'
-const b = 'car'
+// const a = 'car'
+// const b = 'car'
+//
+// function something(c, d) {
+//     if (c.length !== d.length) return false
+//     const objectmap = {}
+//
+//     for (let i = 0; i < c.length; i++) {
+//         objectmap[c[i]] ? objectmap[c[i]]++ : objectmap[c[i]] = 1
+//     }
+//     console.log(objectmap)
+//
+//     for (let i = 0; i < d.length; d++) {
+//         if (objectmap[d[i]]) objectmap[d[i]]--
+//         else return false
+//     }
+//     return true
+// }
+//
+// console.log(something(a, b))
 
-function something(c, d) {
-    if (c.length !== d.length) return false
-    const objectmap = {}
 
+let a = "anagram"
+let b = "anagram"
+
+function hashMap(c, d) {
+    let object = {}
     for (let i = 0; i < c.length; i++) {
-        objectmap[c[i]] ? objectmap[c[i]]++ : objectmap[c[i]] = 1
+        object[c[i]] = object[c[i]] ? object[c[i]]+1 : object[c[i]] = 1
+        object[d[i]] = object[d[i]] ? object[d[i]]-1 : object[d[i]] - 1
+        console.log(object)
     }
-    console.log(objectmap)
 
-    for (let i = 0; i < d.length; d++) {
-        if (objectmap[d[i]]) objectmap[d[i]]--
-        else return false
+    for (key in object) {
+        if (object[key] !== 0) {
+            return false
+        }
     }
     return true
 }
 
-console.log(something(a, b))
+console.log(hashMap(a,b))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
