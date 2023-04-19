@@ -76,31 +76,68 @@
 //
 
 
-list = [1, 2, 7, 11, 15]
+
+
+// list = [2, 7, 11, 15]
+//
+// function something(num, target) {
+//
+//     let object = {}
+//
+//     for (let i = 0; i < num.length; i++) {
+//
+//         // showing current object
+//         object[num[i]] = i
+//
+//         let n = target - num[i]
+//         let find = object[n]
+//         //
+//         // if (find !== undefined) return [find, i]
+//         // else object[num[i]] = i
+//
+//         console.log(object)
+//         console.log(n)
+//         console.log(find)
+//     }
+// }
+//
+// console.log(something(list, 9))
+//
+
+
+
+
+
+
+
+
+
+
+list = [2, 7, 11, 15]
 
 function something(num, target) {
 
     let object = {}
-    let rememberLoop = {}
+
     for (let i = 0; i < num.length; i++) {
+
+        // showing current object
         object[num[i]] = i
-    }
 
-    for (let i = 0; i < num.length; i++) {
-        // no index for target
-        let remember = target - num[i]
+        let n = target - num[i]
+        let find = object[n]
+        //
+        // if (find !== undefined) return [find, i]
+        // else object[num[i]] = i
 
-        for (let j = 0; j < remember.length; j++){
-
-        }
 
         console.log(object)
-        console.log(remember)
-        console.log(rememberLoop)
+        console.log(n)
+        console.log(find)
     }
 }
 
-console.log(something(list, 13))
+console.log(something(list, 9))
 
 
 
