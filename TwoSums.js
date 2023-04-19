@@ -143,4 +143,3 @@ console.log(something(list, 9))
 
 
 
-
