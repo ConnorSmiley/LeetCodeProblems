@@ -42,64 +42,28 @@
 // console.log(something(nums))
 
 
-let nums = [1,2,3,1]
+let array = [1, 2, 3, 1]
+let array2 = [1, 2, 3]
 
-function something(a) {
-    const set = new Set(a)
-    if (set.size !== a.length) {
-        return true
+
+function something(nums) {
+    let object = {}
+    for (let i = 0; i < nums.length; i++) {
+        console.log(nums)
+        console.log(nums[i])
+
+        let x = nums[i]
+        if (object[x]) {
+            return true
+        } else {
+            object[x] = true
+        }
     }
     return false
-
 }
 
-console.log(something(nums))
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+console.log(something(array))
+console.log(something(array2))
 
 
 
