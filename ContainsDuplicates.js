@@ -78,4 +78,3 @@ console.log(something(array2))
 
 
 
-
