@@ -42,21 +42,21 @@
 // console.log(something(nums))
 
 
-let array = [1, 2, 3, 1]
+let array = [1, 2, 3, 4, 5]
 let array2 = [1, 2, 3]
 
 
 function something(nums) {
     let object = {}
-    for (let i = 0; i < nums.length; i++) {
-        console.log(nums)
-        console.log(nums[i])
 
+    for (let i = 0; i < nums.length; i++){
         let x = nums[i]
+
         if (object[x]) {
             return true
         } else {
             object[x] = true
+            console.log(object)
         }
     }
     return false
