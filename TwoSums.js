@@ -112,7 +112,6 @@
 
 
 
-135-0004
 list = [2, 7, 11, 15]
 
 function something(num, target) {

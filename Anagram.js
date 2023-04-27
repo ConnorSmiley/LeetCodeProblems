@@ -55,28 +55,59 @@
 // console.log(something(a, b))
 
 
-let a = "anagram"
-let b = "anagram"
+// let a = "anagram"
+// let b = "anagram"
+//
+// function hashMap(c, d) {
+//     let object = {}
+//     for (let i = 0; i < c.length; i++) {
+//         object[c[i]] = object[c[i]] ? object[c[i]]+1 : object[c[i]] = 1
+//         object[d[i]] = object[d[i]] ? object[d[i]]-1 : object[d[i]] - 1
+//         console.log(object)
+//     }
+//
+//     for (key in object) {
+//         if (object[key] !== 0) {
+//             return false
+//         }
+//     }
+//     return true
+// }
+//
+// console.log(hashMap(a,b))
 
-function hashMap(c, d) {
-    let object = {}
-    for (let i = 0; i < c.length; i++) {
-        object[c[i]] = object[c[i]] ? object[c[i]]+1 : object[c[i]] = 1
-        object[d[i]] = object[d[i]] ? object[d[i]]-1 : object[d[i]] - 1
-        console.log(object)
-    }
 
-    for (key in object) {
-        if (object[key] !== 0) {
-            return false
-        }
+
+
+
+
+
+
+
+
+
+let a1 = "anagram"
+let b1 = "anagram"
+
+function something(a, b) {
+    if (a.length !== b.length) return false
+
+    const map = {}
+
+    for (let i in a) {
+        map[a[i]] ? map[a[i]]++ : map[a[i]] = 1
     }
+    console.log(map)
+
+    for (let i in b){
+        if (map[b[i]]) map[b[i]]--
+        else return false
+    }
+    console.log(map)
     return true
 }
 
-console.log(hashMap(a,b))
-
-
+console.log(something(a1, b1))
 
 
 

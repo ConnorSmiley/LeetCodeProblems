@@ -42,33 +42,67 @@
 // console.log(something(nums))
 
 
-let array = [1, 2, 3, 4, 5]
+// let array = [1, 2, 3, 4, 5]
+// let array2 = [1, 2, 3]
+//
+//
+// function something(nums) {
+//     let object = {}
+//
+//     for (let i = 0; i < nums.length; i++){
+//         let x = nums[i]
+//
+//         if (object[x]) {
+//             return true
+//         } else {
+//             object[x] = true
+//             console.log(object)
+//         }
+//     }
+//     return false
+// }
+//
+// console.log(something(array))
+// console.log(something(array2))
+
+
+// let array = [1, 2, 3, 4, 1]
+// let array2 = [1, 2, 3]
+//
+//
+// function something(nums) {
+//     let object = {}
+//     for (let i = 0; i < nums.length; i++) {
+//         if (object[nums[i]]) {
+//             return true
+//         } else {
+//             object[nums[i]] = true
+//         }
+//     }
+//     return false
+//
+// }
+//
+// console.log(something(array))
+// console.log(something(array2))
+
+
+let array = [1, 2, 3, 4, 1]
 let array2 = [1, 2, 3]
 
 
 function something(nums) {
-    let object = {}
-
-    for (let i = 0; i < nums.length; i++){
-        let x = nums[i]
-
-        if (object[x]) {
-            return true
-        } else {
-            object[x] = true
-            console.log(object)
-        }
+    let object = new Set(nums)
+    console.log(object)
+    if (nums.length !== object.size){
+        return true
+    } else {
+        return false
     }
-    return false
 }
 
 console.log(something(array))
 console.log(something(array2))
-
-
-
-
-
 
 
 
