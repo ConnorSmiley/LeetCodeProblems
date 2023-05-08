@@ -90,21 +90,6 @@ let a1 = "anagram"
 let b1 = "anagram"
 
 function something(a, b) {
-    if (a.length !== b.length) return false
-
-    const map = {}
-
-    for (let i in a) {
-        map[a[i]] ? map[a[i]]++ : map[a[i]] = 1
-    }
-    console.log(map)
-
-    for (let i in b){
-        if (map[b[i]]) map[b[i]]--
-        else return false
-    }
-    console.log(map)
-    return true
 }
 
 console.log(something(a1, b1))

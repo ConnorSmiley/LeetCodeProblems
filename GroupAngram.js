@@ -15,32 +15,89 @@
 // console.log(something(array))
 
 
-let array = ["eat", "tea", "tan", "ate", "nat", "bat"]
+// let array = ["eat", "tea", "tan", "ate", "nat", "bat"]
+//
+// const something = (a) => {
+//     let object = {}
+//
+//     for (let i of a) {
+//         let letters = i.split('').sort().join('')
+//         // console.log(letters.split(''))
+//         // console.log({i})
+//         // console.log({letters})
+//
+//         if (object[letters]) {
+//             let weird = letters.split('').sort().join('')
+//
+//             object[weird].push(i)
+//
+//             // console.log([i])
+//             // console.log(object)
+//             // console.log(object[letters])
+//         } else {
+//             object[letters] = [i.split('').sort().join('')]
+//         }
+//     }
+//     return Object.values(object)
+// }
+//
+// console.log(something(array))
 
-const something = (a) => {
-    let object = {}
 
-    for (let i of a) {
-        let letters = i.split('').sort().join('')
-        // console.log(letters.split(''))
-        // console.log({i})
-        // console.log({letters})
+// const groupAnagrams = function (strs) {
+//     const map = new Map();
+//
+//     strs.forEach(v => {
+//         const key = v.split('').sort().join('');
+//         map.has(key) ? map.set(key, [...map.get(key), v]) : map.set(key, [v]);
+//     })
+//
+//     return [...map.values()];
+// };
 
-        if (object[letters]) {
-            let weird = letters.split('').sort().join('')
 
-            object[weird].push(i)
+// let array = ["eat", "tea", "tan", "ate", "nat", "bat"]
+//
+// const something = (a) => {
+//     let object = {}
+//
+//     for (let i of a) {
+//         let letters = i.split('').sort().join('')
+//         // console.log(letters.split(''))
+//         // console.log({i})
+//         // console.log({letters})
+//
+//         if (object[letters]) {
+//             let weird = letters.split('').sort().join('')
+//
+//             object[weird].push(i)
+//
+//             // console.log([i])
+//             // console.log(object)
+//             // console.log(object[letters])
+//         } else {
+//             object[letters] = [i]
+//         }
+//     }
+//     return Object.values(object)
+// }
+//
+// console.log(something(array))
 
-            // console.log([i])
-            // console.log(object)
-            // console.log(object[letters])
 
-        } else {
+let array = ["eat", "tea", "tan", "ate", "nat", "bat", "tab", "ant"]
 
-            object[letters] = [i.split('').sort().join('')]
-        }
-    }
-    return Object.values(object)
+const groupAnagrams = function (strs) {
+    let map = new Map()
+    strs.forEach(x => {
+        let splitted = x.split('').sort().join()
+
+        map.has(splitted) ? map.set(splitted, [...map.get(splitted), x]) : map.set(splitted, [x])
+    })
+    return map.values()
 }
 
-console.log(something(array))
+console.log(groupAnagrams(array))
+
+
+
