@@ -90,13 +90,7 @@ let a1 = "anagram"
 let b1 = "anagram"
 
 function something(a, b) {
-    let object = {}
-    for (let i of a) {
-        let sorted = i.split('').sort().join()
-
-    }
-    return object
-
+    return spli
 }
 
 console.log(something(a1, b1))
