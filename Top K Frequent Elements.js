@@ -39,9 +39,9 @@ array4 = [7, 10, 11, 5, 2, 5, 5, 7, 11, 8, 9]
 const something = (nums, k) => {
     let map = new Map()
     nums.forEach(x => map.set(x, map.get(x) + 1 || 1))
-    let vals = [...map].sort((a, b) => b[1] - a[1])
-    let mapped = vals.map(x  => x.shift(1))
-    return mapped.splice(0, k)
+        let sorted = [...map].sort((a, b) => b[1] - a[1])
+        let mapped = sorted.map(x  => x.shift())
+        return mapped.slice(0, k)
 }
 
 
