@@ -100,37 +100,17 @@
 // console.log(groupAnagrams(array))
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 let array = ["eat", "tea", "tan", "ate", "nat", "bat", "tab", "ant"]
 
 
 const groupAnagrams = function (strs) {
     let map = new Map()
-    strs.forEach(x  => {
-        let sort = x.split('').sort().join('')
-        map.has(sort) ? map.set(sort, [...map.get(sort), x] ) : map.set(sort, [x])
+    strs.forEach(x => {
+        let splitted = x.split('').sort().join('')
+        map.has(splitted) ? map.set(splitted, [...map.get(splitted), x]) : map.set(splitted, [x])
+
     })
-    return map.values()
+    return map
 }
 
 console.log(groupAnagrams(array))

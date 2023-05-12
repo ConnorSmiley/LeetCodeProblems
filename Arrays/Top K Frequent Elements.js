@@ -36,12 +36,12 @@ array3 = [3, 1, 4, 4, 5, 2, 6, 1]
 array4 = [7, 10, 11, 5, 2, 5, 5, 7, 11, 8, 9]
 // K = 4
 
-const something = (nums, k) => {
-    const map = new Map()
-    nums.forEach(x => map.set(x, map.get(x) + 1 || 1))
-    let sort = [...map].sort((a, b) => b[1] - a[1])
-    let mapped = sort.map(x  => x.shift())
 
+const something = (nums, k) => {
+    let map = new Map()
+    nums.forEach(x => map.set(x, map.get(x) + 1 || 1))
+    let sorted = [...map].sort((a, b) => b[1] - a[1])
+    let mapped = sorted.map(x => x.shift())
     return mapped.slice(0, k)
 }
 
