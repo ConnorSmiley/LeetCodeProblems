@@ -64,20 +64,19 @@ const something = (board) => {
         for (let d = 0; d < 9; d++) {
             let rowd = board[i][d]
             let cold = board[d][i]
-            let boxd = board[3 * Math.floor(i / 3) + Math.floor(d / 3)][3 * (i % 3) + (d % 3)]
-            if (rowd != '.') {
+            let boxd = board[3 * Math.floor(i / 3) + (Math.floor(d / 3))][3 * (i % 3 + d % 3)]
+            if (rowd !== '.') {
                 if (row.has(rowd)) return false
                 row.add(rowd)
             }
-            if (cold != '.') {
+            if (cold !== '.') {
                 if (col.has(cold)) return false
                 col.add(cold)
             }
-            if (boxd != '.') {
+            if (boxd !== '.') {
                 if (box.has(boxd)) return false
                 box.add(boxd)
             }
-
         }
         return true
     }
