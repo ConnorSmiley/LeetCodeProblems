@@ -41,8 +41,8 @@ const something = (nums, k) => {
     let map = new Map()
     nums.forEach(x => map.set(x, map.get(x) + 1 || 1))
     let sorted = [...map].sort((a, b) => b[1] - a[1])
-    let values = sorted.map(x => x.shift())
-    return values.slice(0, k)
+    let mapped = sorted.map(x => x.shift())
+    return mapped.slice(0, k)
 }
 
 

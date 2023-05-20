@@ -12,20 +12,6 @@
 // console.log(nestedLoop(nums, 9))
 
 
-// nums = [2,7,11,15]
-//
-// function something(num, target) {
-//     const map = {}
-//
-//     for (let i = 0; i < num.length; i++) {
-//         map[[num]i] ? map[num[i]]++ : map[num[i]] = 1
-//     }
-//
-//     console.log(map)
-// }
-//
-//
-// console.log(something(num, 2))
 
 
 // list = [2,7,11,15]
@@ -78,31 +64,33 @@
 
 
 
+list = [2, 7, 11, 15]
+
+function something(num, target) {
+    let map = new Map()
+    num.forEach(x => map.set(x, map.get(x) + 1 || 1))
+    console.log(map)
+}
+
+console.log(something(list, 9))
+
+
+
+
+
+
+
+
+
+
 // list = [2, 7, 11, 15]
 //
 // function something(num, target) {
 //
-//     let object = {}
 //
-//     for (let i = 0; i < num.length; i++) {
-//
-//         // showing current object
-//         object[num[i]] = i
-//
-//         let n = target - num[i]
-//         let find = object[n]
-//         //
-//         // if (find !== undefined) return [find, i]
-//         // else object[num[i]] = i
-//
-//         console.log(object)
-//         console.log(n)
-//         console.log(find)
-//     }
 // }
 //
 // console.log(something(list, 9))
-//
 
 
 
@@ -112,31 +100,14 @@
 
 
 
-list = [2, 7, 11, 15]
-
-function something(num, target) {
-
-    let object = {}
-
-    for (let i = 0; i < num.length; i++) {
-
-        // showing current object
-        object[num[i]] = i
-
-        let n = target - num[i]
-        let find = object[n]
-        //
-        // if (find !== undefined) return [find, i]
-        // else object[num[i]] = i
 
 
-        console.log(object)
-        console.log(n)
-        console.log(find)
-    }
-}
 
-console.log(something(list, 9))
+
+
+
+
+
 
 
 

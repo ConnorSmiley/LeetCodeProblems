@@ -77,20 +77,26 @@
 // console.log(hashMap(a,b))
 
 
-
-
-
-
-
-
-
-
-
 let a1 = "anagram"
 let b1 = "anagram"
 
 function something(a, b) {
-    return spli
+    if (a.length !== b.length) return false
+
+    let temp = {}
+
+    for (let i of a) {
+       temp[i] ? temp[i] += 1 : temp[i] = 1
+    }
+
+    for (let i of b) {
+        if (!temp[i]) {
+            return false
+        } else {
+            temp[i] -= 1
+        }
+    }
+    return true
 }
 
 console.log(something(a1, b1))
