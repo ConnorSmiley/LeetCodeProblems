@@ -1,5 +1,5 @@
 let array1 = [1, 2, 3, 2, 8, 1, 5]
-let number = 1
+let number = 2
 // let array2 = [1,2,5,2,8,1,5], 4)
 // let array3 = [4,2,1,6], 1)
 // let array4 = [4,2,1,6,2], 4)
@@ -9,14 +9,13 @@ let number = 1
 const something = (input, number) => {
     let max = 0
     let temp = 0
-    for (let i = 0; i < number; i++) {
+    for (let i = 0; i < input.length; i++) {
         max += i
     }
     temp = max
-    for (let i = number; i < input.length; i++) {
-        temp = temp - input[i-number] + input[i]
+    for (let i = number; i < input.length; i++){
+        temp = temp - input[i - number] + input[i]
         max = Math.max(max, temp)
-
     }
     return max
 }
