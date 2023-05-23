@@ -7,17 +7,19 @@ let number1 = 2
 
 
 const something = (input, num) => {
-    let max = 0
+    let window = 0
     let temp = 0
     for (let i = 0; i < num; i++){
-        max += input[i]
+        window += input[i]
     }
-    temp = max
-    for (let i = num; i < input.length; i++) {
-        temp = temp - input[i - num] + input[i]
-        max = Math.max(max, temp)
+    temp = window
+    for (let i = num; i < input.length; i++){
+        temp = temp + input[i] - input[i - num]
+        window = Math.max(window, temp)
     }
-    return max
+    return window
+
+
 }
 
 
