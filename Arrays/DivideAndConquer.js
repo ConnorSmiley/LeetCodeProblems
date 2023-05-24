@@ -14,20 +14,17 @@ let array = [
 const something = (input, val) => {
     let min = 0
     let max = input.length - 1
-
-    while (min < max) {
+    while (min <= max) {
         let middle = Math.floor((min + max) / 2)
-        let curr = input[middle]
-
         if (input[middle] < val) {
             min = middle + 1
         } else if (input[middle] > val) {
             max = middle - 1
-
         } else {
             return middle
         }
     }
+
 }
 
 

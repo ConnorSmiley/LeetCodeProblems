@@ -1,14 +1,98 @@
-let array = [1,2,3,4,5,6,7,8,9]
 
 
 
-const something = (x) => {
-    x.forEach(x => {
-        let d = x % 5
-        console.log(d)
-    })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const sameFrequency = (input, input2) => {
+    let map = new Map()
+    input.forEach(x => map.set(x, 1))
+
 }
 
 
-something(array)
+
+
+console.log(sameFrequency(182,281))
+console.log(sameFrequency(34,14))
+console.log(sameFrequency(3589578, 5879385))
+console.log(sameFrequency(22,222))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
