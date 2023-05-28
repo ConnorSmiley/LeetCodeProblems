@@ -22,27 +22,15 @@
 
 
 const sameFrequency = (input, input2) => {
-    let map = new Map()
-
-
     let s = input.toString().split('')
     let s2 = input2.toString().split('')
 
     if (s.length !== s2.length) return false
 
-    for (let i = 0; i < s.length; i++){
-        map.set(s[i], map.get(s[i]) + 1 || 1)
-    }
-
-    for (let i = 0; i < s2.length; i++) {
-        map.delete(s2[i], map.get(s2[i]))
-    }
-
-    if (map.size !== 0) {
-        return false
-    }
-    return true
-
+    let map = new Map()
+    s.forEach(x => map.set(x, map.get(x) + 1 || 1))
+    s2.forEach(x => map.delete(x))
+    return (map.size === 0)
 }
 
 
@@ -54,6 +42,31 @@ console.log(sameFrequency(34,14))
 console.log(sameFrequency(3589578, 5879385))
 console.log(sameFrequency(22,222))
 console.log(sameFrequency(0,0))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
