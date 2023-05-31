@@ -22,15 +22,22 @@
 
 
 const sameFrequency = (input, input2) => {
-    let s = input.toString().split('')
-    let s2 = input2.toString().split('')
-
-    if (s.length !== s2.length) return false
-
     let map = new Map()
-    s.forEach(x => map.set(x, map.get(x) + 1 || 1))
-    s2.forEach(x => map.delete(x))
-    return (map.size === 0)
+    let s = input.toString()
+    let s2 = input2.toString()
+
+    for (let i of s) {
+        map.set(i, map.get(i) + 1 || 1)
+    }
+
+    for (let i of s2){
+        map.delete(i)
+    }
+    if (map.size !== 0){
+        return false
+    }
+    return true
+
 }
 
 
