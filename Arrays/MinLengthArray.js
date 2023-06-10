@@ -26,19 +26,13 @@
 
 
 const minSubArrayLen = (input, num) => {
-    let total = 0
-    let start = 0
-    let end = 0
-    let minLen = Infinity
-    while(start< input.length) {
-       if (total < sum && end < input.length)  {
-           total += input[end]
-           end ++
-       }
-       else if (total >= sum) {
-
-       }
+    const total = 0
+    const start = 0
+    const end = input.length - 1
+    for (let i = 0; i < input.length; i++){
     }
+
+
 }
 
 

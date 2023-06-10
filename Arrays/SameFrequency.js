@@ -21,23 +21,43 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 const sameFrequency = (input, input2) => {
-    let map = new Map()
-    let s = input.toString()
-    let s2 = input2.toString()
+    let object = {}
+    let s1 = input.toString().split('')
+    let s2 = input2.toString().split('')
 
-    for (let i of s) {
-        map.set(i, map.get(i) + 1 || 1)
+    for (let i = 0; i < s1.length; i++){
+        object[s1[i]] = object[s1[i]] + 1 || 1
     }
-
-    for (let i of s2){
-        map.delete(i)
+    for (let i = 0; i < s2.length; i++){
+        if (object[s2[i]]) {
+            object[s2[i]]--
+        }
     }
-    if (map.size !== 0){
-        return false
+    for (let i in object) {
+        if (object[i] > 0) {
+            return false
+        }
     }
     return true
-
 }
 
 

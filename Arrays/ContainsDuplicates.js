@@ -87,18 +87,90 @@
 // console.log(something(array2))
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 let array = [1, 2, 3, 4, 1]
 let array2 = [1, 2, 3]
 
 
 function something(nums) {
-    let object = new Set(nums)
-    console.log(object)
-    if (nums.length !== object.size){
-        return true
-    } else {
-        return false
+    let object = {}
+    for (let i = 0; i < nums.length; i++){
+        object[nums[i]] = object[nums[i]] + 1 || 1
     }
+    for (let key in object){
+        if (object[key] > 1){
+            return false
+        }
+    }
+    return true
+
 }
 
 console.log(something(array))

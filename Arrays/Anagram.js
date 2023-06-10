@@ -82,14 +82,14 @@ let b1 = "anagram"
 
 function something(a, b) {
     let object = {}
-    let s = a.split('')
-    let s2 = b.split('')
-    for (let i = 0; i < s.length; i++){
-        object[s[i]] = (object[s[i]]) + 1 || 1
+    for (let i = 0; i < a.length; i++) {
+        object[a[i]] = object[a[i]] + 1 || 1
     }
-    for (let i = 0; i < s2.length; i++){
-        object[s2[i]] -= object[s2[i]] - 1
+    for (let i = 0; i < b.length; i++){
+        if (object[b[i]]) object[b[i]]--
+            else return false
     }
+    return true
 }
 
 console.log(something(a1, b1))

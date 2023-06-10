@@ -59,6 +59,16 @@
 
 
 const maxSubarraySum = (input, num) => {
+    let total = 0
+    for (let i = 0; i < num; i++){
+        total += input[i]
+    }
+    let currentTotal = total
+    for (let i = 0; i < input.length; i++){
+        currentTotal = input[i] - input[num]
+        total = Math.max(total, currentTotal)
+    }
+    return total
 
 }
 
