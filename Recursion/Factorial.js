@@ -39,8 +39,8 @@
 
 
 const x = (num) => {
-    if (num <= 1) return 1
-    return num * x(num-1)
+   if (num === 0) return 1
+    return num * x(num -1 )
 }
 
 console.log(x(4))

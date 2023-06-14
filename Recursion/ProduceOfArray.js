@@ -40,7 +40,7 @@ const x = (num) => {
 }
 
 
-console.log(x([1,2,3,4]))
+console.log(x([1,2,3,4,7]))
 
 
 

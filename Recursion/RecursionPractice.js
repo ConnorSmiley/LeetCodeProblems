@@ -52,7 +52,7 @@
 // }
 //
 //
-// console.log(something(10))
+// console.log(something(1))
 
 
 
@@ -63,38 +63,45 @@
 
 
 
-const myBrain = (health) => {
-    let dead = 0
-    for (let work = health;
-         work > dead;
-         work--){
-        health--
+// const myBrain = (health) => {
+//     let dead = 0
+//     for (let work = health;
+//          work > dead;
+//          work--){
+//         health--
+//     }
+// }
+// myBrain(200)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const recursion = (input) => {
+    for (let i = 0; i <= input; i++){
+        input[i]++
+        console.log(i)
     }
+
+
 }
-myBrain(200)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+recursion(100)
 
 
 
