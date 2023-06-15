@@ -42,3 +42,22 @@ const selection = (input) => {
 
 
 console.log(selection([64, 34, 25, 12, 22, 11, 90]))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
