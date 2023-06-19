@@ -26,9 +26,18 @@ const x = (arr, start = 0, end = arr.length + 1) => {
         }
     }
     swap(arr, start, swapIdx)
-    console.log(arr)
     return swapIdx
 }
 
+const quicksort = (arr, left = 0, right = arr.length - 1) => {
+    if (left < right) {
+        let pivotIndex = x(arr, left, right)
 
-console.log(x([4,2,7,9,1,3,7,8]))
+        quicksort(arr,left, pivotIndex-1)
+        quicksort(arr,pivotIndex+1,right)
+    }
+    return arr
+}
+
+
+console.log(quicksort([4,2,7,9,1,3,7,8]))
