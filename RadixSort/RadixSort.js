@@ -67,4 +67,3 @@ console.log(getDigit([1,2,4,6]))
 
 
 
-
