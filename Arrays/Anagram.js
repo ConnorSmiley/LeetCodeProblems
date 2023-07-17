@@ -77,23 +77,72 @@
 // console.log(hashMap(a,b))
 
 
+
+
+
+
+// let a1 = "anagram"
+// let b1 = "anagram"
+//
+// function something(a, b) {
+//     let object = {}
+//     for (let i = 0; i < a.length; i++) {
+//         object[a[i]] = object[a[i]] + 1 || 1
+//     }
+//     for (let i = 0; i < b.length; i++){
+//         if (object[b[i]]) object[b[i]]--
+//             else return false
+//     }
+//     return true
+// }
+//
+// console.log(something(a1, b1))
+// console.log(something('dfdaf', 'aaf'))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 let a1 = "anagram"
 let b1 = "anagram"
 
 function something(a, b) {
     let object = {}
-    for (let i = 0; i < a.length; i++) {
+    for(let i in a) {
         object[a[i]] = object[a[i]] + 1 || 1
     }
-    for (let i = 0; i < b.length; i++){
-        if (object[b[i]]) object[b[i]]--
-            else return false
-    }
-    return true
+    for (let i in b) {
+
 }
 
 console.log(something(a1, b1))
 console.log(something('dfdaf', 'aaf'))
+
+
+
+
+
+
+
+
+
 
 
 
