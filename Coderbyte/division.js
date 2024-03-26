@@ -1,14 +1,16 @@
 const num1 = 6
-const num2 = 4
+const num2 = 24
 
 
 function division (a,b) {
-    const temp = 0
+    let temp = 0
     const limit = Math.min(a,b)
-    console.log(limit)
-    for (i in limit) {
-
+    for (let i = 1; i <= limit; i++) {
+        if (a % i === 0 &&  b % i === 0) {
+            temp += i
+        }
     }
+    return temp
 }
 
 console.log(division(num1, num2))
